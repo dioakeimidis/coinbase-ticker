@@ -9,7 +9,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "prepare": "npx husky-init && husky install"
+    "prepare-husky": "npx husky-init"
   },
   "keywords": [],
   "author": "dimitrios",
