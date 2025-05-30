@@ -1,0 +1,66 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#1594ca",
+    "titleBar.activeForeground": "#b5e4f4",
+    "titleBar.inactiveBackground": "#1e2025",
+    "titleBar.inactiveForeground": "#a5a2a2",
+    "statusBar.background": "#1594ca",
+    "statusBar.foreground": "#ffffff",
+    "statusBarItem.hoverBackground": "#114860",
+
+    "activityBar.activeBorder": "#ffffff",
+    "activityBar.background": "#1594ca",
+    "activityBar.foreground": "#e2f1f6",
+    "activityBarBadge.background": "#114860",
+  },
+  /* Misc */
+  "search.exclude": { "node_modules/**": true },
+  "explorer.confirmDelete": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
+  "editor.multiCursorModifier": "ctrlCmd",
+
+  /* prettier */
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": ".prettierrc",
+
+  /* eslint */
+  "eslint.validate": ["javascript", "typescript"],
+
+  /* Files */
+  "files.encoding": "utf8",
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+
+  /* Save Changes */
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.formatOnSave":true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "always"
+    }
+  }
+}
