@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 22",
+  "_version": "22.0.0",
+  "compilerOptions": {
+    "lib": ["es2023"],
+    "module": "nodenext",
+    "target": "es2022",
+    "moduleResolution": "node16",
+
+    "outDir": "build",
+    "rootDir": "src",
+    "types": ["node"],
+    "typeRoots" : ["node_modules/@types"],
+
+    "strict": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "isolatedModules": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "incremental": true,
+    "removeComments": true,
+    "declaration": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "exactOptionalPropertyTypes": false
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude" : [
+    "src/**/*.spec.ts"
+  ]
+}
