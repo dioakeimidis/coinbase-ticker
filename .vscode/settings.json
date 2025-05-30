@@ -22,7 +22,7 @@
 
   /* prettier */
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.configPath": ".prettierrc",
+  "prettier.configPath": ".prettierrc.json",
 
   /* eslint */
   "eslint.validate": ["javascript", "typescript"],
