@@ -11,7 +11,7 @@
     "outDir": "build",
     "rootDir": "src",
     "types": ["node", "globals"],
-    "typeRoots" : ["node_modules/@types", "node_modules/vitest"],
+    "typeRoots" : ["node_modules/@types", "node_modules/vitest", "./src/@types"],
 
     "sourceMap": true,
     "declaration": true,

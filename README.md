@@ -29,13 +29,13 @@ The webserver must handle all incoming prices updates and then send them to the 
 
 <!-- this is a placeholder for context -->
 
-## 👀 Dev Workflow - Core Features
+## 👀 Core Features
 
 - NodeJS v22.0.0
 - Typescript
 - Testing with Vitest
 - Linting with ESLint, Prettier, Editorconfig
-- Pre-commit hook with Husky
+- Pre-commit hook with Husky and Lint-Staged
 
 ## 🚀 Project Structure
 
