@@ -2,6 +2,7 @@
   "name": "coinbase-ticker",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
     "start": "ts-node ./src/server.ts",
     "start:dev": "nodemon",
@@ -23,6 +24,7 @@
     "@types/node": "^22.15.29",
     "@typescript-eslint/eslint-plugin": "^8.33.0",
     "@typescript-eslint/parser": "^8.33.0",
+    "dotenv": "^16.5.0",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.1",
