@@ -1,2 +1,2 @@
-export * from "./coinbase-ticker";
-export * from "./websocket-server";
+export { CoinbaseTicker } from "./coinbase-ticker";
+export { StreamerServer } from "./websocket-server";

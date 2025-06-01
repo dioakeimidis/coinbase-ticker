@@ -1,42 +1,36 @@
 import "dotenv/config";
 
-import { CoinbaseTicket, StreamerServer } from "./services";
-import { TickerModel } from "./services/coinbase-ticker/types";
+import { CoinbaseTicker, StreamerServer } from "./services";
+import { TickerModel } from "./@types";
 
-// Create Server-Client Websocket Instance
+// Instaniate our servers
 const server = new StreamerServer();
-
-// Create Server-Coinbase Websocket Instance
-
-const coinbaseStreamer = new CoinbaseTicket();
-
-// Connect to Coinbase to start receiving Bids
-coinbaseStreamer.connect();
+const coinbaseStreamer = new CoinbaseTicker();
 
 /**
- * Start the WebsocketServer when Coibase Connection is established
- * and only if Server is not live
+ * Start CoinbaseStreamer and when ready
+ * start WebSocketServer as well
  */
+coinbaseStreamer.connect();
 coinbaseStreamer.on("socket-connection", () => {
-  if (!server.STATUS) server.start();
+  if (!server.STATE) server.start();
 });
 
+// Pass the messages to the WebsocketServer
 coinbaseStreamer.on("message", (message: TickerModel) => {
-  console.debug(message);
-  if (server.STATUS === 2) server.broadcastToAllClients(message);
+  if (server.STATE === 2) server.broadcastToAllClients(message);
 });
 
 /**
  * Disconnect from the Coinbase gracefully,
  * when a shutdown signal is raised.
- *
  */
-
 process.on("SIGINT", () => {
   server.quit();
   coinbaseStreamer.disconnect();
   process.exit(0);
 });
+
 process.on("SIGTERM", () => {
   server.quit();
   coinbaseStreamer.disconnect();
