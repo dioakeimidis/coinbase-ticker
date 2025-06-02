@@ -42,6 +42,6 @@ pnpm start
 
 The server runs in the following URL: `ws://localhost:8081/ws`
 
-During the testing it has been used the following chrome plugin:
+For testing you can use the following plugin:
 
 <https://chromewebstore.google.com/detail/websocket-test-client/fgponpodhbmadfljofbimhhlengambbn>
